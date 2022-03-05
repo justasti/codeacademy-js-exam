@@ -20,8 +20,12 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51, hasDog: true },
 ];
 filterDogOwers = (arr) => {
-  return arr.filter((user) => user.hasDog === true).map((user) => user.name);
+  arr
+    .filter((user) => user.hasDog === true)
+    .map((user) => user.name)
+    .forEach((owner) => console.log(owner));
 };
 filterAdults = (arr) => {
   return arr.filter((user) => user.age >= 18).map((user) => user.name);
 };
+filterDogOwers(users);
