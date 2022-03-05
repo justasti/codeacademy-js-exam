@@ -22,5 +22,6 @@ const users = [
 filterDogOwers = (arr) => {
   return arr.filter((user) => user.hasDog === true).map((user) => user.name);
 };
-
-console.log(filterDogOwers(users));
+filterAdults = (arr) => {
+  return arr.filter((user) => user.age >= 18).map((user) => user.name);
+};
